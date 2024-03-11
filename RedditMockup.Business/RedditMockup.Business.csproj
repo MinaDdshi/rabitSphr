@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="Base\" />
+        <None Remove="Businesses\" />
+        <None Remove="Contracts\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="EntityBusinesses\" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="StackExchange.Redis" Version="2.6.104" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\RedditMockup.Common\RedditMockup.Common.csproj" />
+        <ProjectReference Include="..\RedditMockup.DataAccess\RedditMockup.DataAccess.csproj" />
+    </ItemGroup>
+</Project>
